@@ -9,7 +9,7 @@ import 'dart:convert';
 
 // import 'package:flutter/material.dart';
 // import 'package:flutter_test/flutter_test.dart';
-import 'package:valorant_insider_bloc/widget/constant/constant.dart';
+import 'package:valorant_insider_bloc/UI/constant/constant.dart';
 import 'package:valorant_insider_bloc/data/models/agent_model.dart';
 
 // import 'package:valorant_insider_bloc/main.dart';

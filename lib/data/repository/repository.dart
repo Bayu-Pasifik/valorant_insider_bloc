@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:valorant_insider_bloc/widget/constant/constant.dart';
+import 'package:valorant_insider_bloc/UI/constant/constant.dart';
 import 'package:valorant_insider_bloc/data/models/agent_model.dart';
 import 'package:valorant_insider_bloc/data/models/buddies_model.dart';
 import 'package:valorant_insider_bloc/data/models/weapon_model.dart';

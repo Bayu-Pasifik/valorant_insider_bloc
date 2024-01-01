@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:valorant_insider_bloc/UI/screen/Agent/detail_agent.dart';
 import 'package:valorant_insider_bloc/cubit/agentCubit/agent_cubit.dart';
 import 'package:valorant_insider_bloc/cubit/agentCubit/agent_state.dart';
 import 'package:valorant_insider_bloc/data/models/agent_model.dart';
 import 'package:valorant_insider_bloc/data/repository/repository.dart';
-import 'package:valorant_insider_bloc/widget/constant/constant.dart';
-import 'package:valorant_insider_bloc/widget/screen/detail_agent.dart';
+import 'package:valorant_insider_bloc/UI/constant/constant.dart';
 
 class AgentView extends StatelessWidget {
   const AgentView({Key? key}) : super(key: key);
@@ -106,8 +106,8 @@ class AgentView extends StatelessWidget {
                             },
                             openBuilder: (context, action) {
                               return DetailAgent(
-                                  // agent: agent,
-                                  );
+                                agent: agent,
+                              );
                             },
                           );
                         },

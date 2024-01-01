@@ -1,8 +1,8 @@
 import 'package:custom_clippers/custom_clippers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:valorant_insider_bloc/widget/constant/constant.dart';
-import 'package:valorant_insider_bloc/widget/container_custom.dart';
+import 'package:valorant_insider_bloc/UI/constant/constant.dart';
+import 'package:valorant_insider_bloc/UI/widget/container_custom.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);

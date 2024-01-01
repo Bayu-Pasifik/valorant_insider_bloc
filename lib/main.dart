@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:valorant_insider_bloc/widget/screen/agent_view.dart';
-import 'package:valorant_insider_bloc/widget/screen/home.dart';
+import 'package:valorant_insider_bloc/UI/screen/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

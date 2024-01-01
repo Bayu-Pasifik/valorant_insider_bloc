@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:valorant_insider_bloc/widget/constant/constant.dart';
-import 'package:valorant_insider_bloc/widget/screen/agent_view.dart';
+import 'package:valorant_insider_bloc/UI/constant/constant.dart';
+import 'package:valorant_insider_bloc/UI/screen/Agent/agent_view.dart';
 
 class ContainerToClip extends StatelessWidget {
   const ContainerToClip(
@@ -36,7 +36,7 @@ class ContainerToClip extends StatelessWidget {
           ? Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => AgentView(),
+                builder: (context) => const AgentView(),
               ))
           : Navigator.push(
               context,
