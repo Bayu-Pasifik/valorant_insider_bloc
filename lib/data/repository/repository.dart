@@ -3,10 +3,11 @@ import 'package:http/http.dart' as http;
 import 'package:valorant_insider_bloc/UI/constant/constant.dart';
 import 'package:valorant_insider_bloc/data/models/agent_model.dart';
 import 'package:valorant_insider_bloc/data/models/buddies_model.dart';
+import 'package:valorant_insider_bloc/data/models/map_model.dart';
 import 'package:valorant_insider_bloc/data/models/weapon_model.dart';
 
 class Repository {
-   Future<List<BuddiesModel>> getAllBuddies() async {
+  Future<List<BuddiesModel>> getAllBuddies() async {
     List<BuddiesModel> listBuddies = [];
 
     try {
@@ -24,7 +25,7 @@ class Repository {
     return listBuddies;
   }
 
-   Future<List<AgentModel>> getAllAgent() async {
+  Future<List<AgentModel>> getAllAgent() async {
     List<AgentModel> listAgent = [];
     try {
       Uri url = Uri.parse(urlAgent);
@@ -40,7 +41,24 @@ class Repository {
     return listAgent;
   }
 
-   Future<List<WeaponModel>> getAllWeapon() async {
+  
+  Future<List<MapModel>> getAllMaps() async {
+    List<MapModel> listMap = [];
+    try {
+      Uri url = Uri.parse(urlMap);
+      var response = await http.get(url);
+      if (response.statusCode == 200) {
+        var tempdata = json.decode(response.body)['data'];
+        var data = tempdata.map((e) => MapModel.fromJson(e));
+        listMap = List<MapModel>.from(data);
+      }
+    } catch (e) {
+      listMap = [];
+    }
+    return listMap;
+  }
+
+  Future<List<WeaponModel>> getAllWeapon() async {
     List<WeaponModel> listWeapons = [];
     try {
       Uri url = Uri.parse(urlWeapon);
